@@ -93,6 +93,11 @@ class SignInViewController: UIViewController {
                 
                 if let parseJSON = json {
                     
+                    if parseJSON["errorMessageKey"] != nil
+                    {
+                         self.displayMessage(userMessage: parseJSON["errorMessage"] as! String)
+                        return
+                    }
                     // Now we can access value of First Name by its key
                     let accessToken = parseJSON["token"] as? String
                     let userId = parseJSON["id"] as? String

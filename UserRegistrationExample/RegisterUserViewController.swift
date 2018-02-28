@@ -71,8 +71,8 @@ class RegisterUserViewController: UIViewController {
         
         let postString = ["firstName": firstNameTextField.text!,
                           "lastName": lastNameTextField.text!,
-                          "userName": emailAddressTextField.text!,
-                          "userPassword": passwordTextField.text!,
+                          "email": emailAddressTextField.text!,
+                          "password": passwordTextField.text!,
                           ] as [String: String]
         
         do {
